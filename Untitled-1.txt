@@ -1,0 +1,72 @@
+[11/12, 17:43] Sanchitha @ Nie: 7. Data visualisation with matplotlib and pyplot
+
+According to action plan
+
+
+	1. sin series
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.arange(-2*np.pi,2*np.pi,0.01)
+y=np.sin(x)
+plt.plot(x,y)
+
+	2.To demonstrate matplotlib derive pie chart
+import matplotlib.pyplot as plt
+labels=["A","B","C"]
+colors=["red","blue","green"]
+values=[10,40,80]
+explode=[0,0,0.04]
+plt.title("CHART")
+plt.pie(values,labels=labels,colors=colors,explode=explode,startangle=45,autopct='%.2f%%',shadow='true')
+plt.axis('equal')
+plt.show()
+				(USING PANDAS)
+import matplotlib.pyplot as plt
+import pandas as pd
+df=pd.DataFrame({'ser1':[10,20,30,40],'ser2':[50,60,70,80],'ser3':[90,100,110,120]})
+df['ser1'].plot(kind='pie',figsize=(6,6))
+
+	3. To demonstrate matplotlib derive a line 
+chart having both x and y coordinate 
+values
+
+import matplotlib.pyplot as plt
+x=[0,1,2,3,4]
+y=[10,20,30,40,50]
+plt.axis([0,4,0,50])
+plt.plot(x,y,color='red',marker='*')
+plt.xlabel("GOODmorning")
+plt.ylabel("badmorning")
+plt.title("MORNING!")
+plt.legend(["HELLLOOOO"])
+				(USING PANDAS)
+import pandas as pd
+data={'X':[1,2,3,4],'Y':[10,20,30,40]}
+df=pd.DataFrame(data)
+df
+df['X'].plot(kind='line',figsize=((4,4)),legend=True,xlabel='XX',ylabel='YY')
+
+	4. Barchart
+import numpy as np
+index = np.arange(5)
+values1 = [5,7,3,4,6]
+plt.bar(index,values1)
+plt.xticks(index,['A','B','C','D','E'])
+			USING PANDAS
+
+df=pd.DataFrame({'A':[1,2,3,4],'B':[5,6,7,8],'B':[9,10,11,12]})
+df
+df['A'].plot(kind='bar')
+[11/12, 17:43] Sanchitha @ Nie: def int_to_roman(num):
+    val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    syb = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    
+    roman_numeral = ""
+    for i in range(len(val)):
+        while num >= val[i]:
+            roman_numeral += syb[i]
+            num -= val[i]
+    
+    return roman_numeral
+[11/12, 17:43] Sanchitha @ Nie: Idu python sine wave matte roman to integer conversion du
+[11/12, 17:44] Sanchitha @ Nie: Action plan allide odkondiri
